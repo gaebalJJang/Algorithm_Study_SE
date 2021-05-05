@@ -10,6 +10,8 @@ def reverse(x):
     temp.append(x%10)
     x = int(x/10)
 
+    #한자리수일때 오륲
+
   #10 곱하고 다음 자리 더하고 반복
   res = temp[0] * 10 + temp[1]
   for i in range(2, len(temp)):
@@ -18,7 +20,7 @@ def reverse(x):
 
 def isPrime(x):
   #소수이면 True, 아니면 False
-  res = True
+  res = False
   for i in range(2, x):
     if x%i == 0:
       res = False
