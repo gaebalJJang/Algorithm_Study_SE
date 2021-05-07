@@ -1,7 +1,7 @@
 N, K = map(int, input().split())
 num = list(map(int, input().split()))
 
-#중복을 제거하는 자료구조
+#중복을 제거하는 자료구조 set
 res = set()
 for i in range(N):
     for j in range(i+1, N):
