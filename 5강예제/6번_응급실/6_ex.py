@@ -6,6 +6,7 @@ n, m = map(int, input().split())
 #Val: input 값 list 형태로 받아서 넣음
 Q = [(pos, Val) for pos, val in enumerate(list(map(int, input().split())))]
 Q = deque(Q)
+cnt = 0
 
 while True:
     cur = Q.popleft()
@@ -13,3 +14,10 @@ while True:
     #cur[0] = 0, cur[1] = 30
     #Q안의 x를 돌면서 x[1]과 cur[1]을 비교
     if any(cur[1]<x[1] for x in Q):
+        Q.append(cur)
+    else:
+        cnt += 1
+        if cur[0] == m:
+            break
+
+print(cnt)
